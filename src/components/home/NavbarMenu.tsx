@@ -6,6 +6,7 @@ import { ThemeToggle } from "../ThemeToggle";
 import UserAccountNav from "./UserAccountNav";
 import SignInButton from "../SignInButton";
 import { ChevronDown } from "lucide-react";
+import FramerMagnetic from "../FramerMagnetic";
 
 type Props = {
   session: any;
@@ -24,12 +25,12 @@ const NavbarMenu: React.FC<Props> = ({ session }) => {
 
   return (
     <>
-      <div
+      <FramerMagnetic
         onClick={() => setShow(!show)}
         className="cursor-pointer bg-gray-500/90 opacity-20 hover:opacity-80 p-1 rounded-full"
       >
         <ChevronDown />
-      </div>
+      </FramerMagnetic>
       {show && (
         <div className="flex items-center justify-center h-full gap-2 px-8 mx-auto sm:justify-between max-w-7xl">
           <div className="flex items-center">
