@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/home/Navbar";
@@ -24,11 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(font.className, "antialiased min-h-screen pt-24")}>
-        <Provider>
-          <Navbar />
-          {children}
-          {/* <Toaster /> */}
-        </Provider>
+        <Navbar />
+        <div className="h-24"></div>
+        <Provider>{children}</Provider>
+        {/* <Toaster /> */}
       </body>
     </html>
   );
